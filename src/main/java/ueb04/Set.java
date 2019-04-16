@@ -1,6 +1,6 @@
 package ueb04;
 
-interface Set<T extends Comparable<T>> extends Iterable<T> {
+interface Set<T> extends Iterable<T> {
 	/**
 	 * Fügt das übergebene Element in das Set ein.
 	 * @param s

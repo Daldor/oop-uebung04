@@ -1,9 +1,11 @@
 package ueb04;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
-class StackImpl<T> implements Stack<T> {
+class StackImpl<T extends Comparable<T>> implements Stack<T> {
 	/**
 	 * Gibt einen Reverse-Iterator zurück, d.h. ein Iterator, welcher die Elemente
 	 * in umgekehrter Reihenfolge zurück gibt. Also als erstes das letzte (also "unterste"),
@@ -12,6 +14,24 @@ class StackImpl<T> implements Stack<T> {
 	@Override
 	public Iterator<T> iterator() {
 		// Iterator implementieren...
+
+		return new Iterator<>() {
+			Stack<Integer> agenda = new StackImpl<>();
+			{
+				if(top != null){
+					agenda.push(top);
+				}
+			}
+			@Override
+			public boolean hasNext() {
+				return agenda.size() > 0;
+			}
+
+			@Override
+			public T next() {
+				return null;
+			}
+		};
 		throw new UnsupportedOperationException();
 	}
 

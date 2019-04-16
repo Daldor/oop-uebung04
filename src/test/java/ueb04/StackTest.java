@@ -26,7 +26,7 @@ public class StackTest {
 			cs.push(i);
 		assertEquals(a.length, cs.size());
 
-		// reverse-iterator testen
+		// reverse-Iterator testen
 		Iterator<Integer> it = cs.iterator();
 		for (int i : a)
 			assertEquals((Integer) i, it.next());
