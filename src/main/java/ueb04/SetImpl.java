@@ -38,6 +38,7 @@ class SetImpl<T extends Comparable<T>> implements Set<T> {
 					agenda.add(e.right);
 				}
 				return e.val;
+				//test
 			}
 		};
 	}
